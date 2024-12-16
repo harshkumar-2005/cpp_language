@@ -134,7 +134,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🛠️ Maintainers
 
-- **Your Name** - [GitHub Profile](https://github.com/your-username)
+- **Harsh Thakur** - [GitHub Profile](https://github.com/harshkumar-2005)
 
 ---
 
