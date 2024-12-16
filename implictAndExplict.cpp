@@ -3,52 +3,43 @@ using namespace std;
 
 void withoutexplict(int x, int y)
 {
-    int sum;
-    //doing sum
-    sum =x+y;
+    if (y == 0) {
+        cout << "Division or modulo by zero is not allowed." << endl;
+        return;
+    }
 
-    int div;
-    //doing division
-    div =x/y;
+    int sum = x + y;
+    int div = x / y;  // Integer division
+    int modulo = x % y;
+    int multi = x * y;
 
-    int modulo;
-    modulo =x%y;
-
-    int multi;
-    multi =x*y;
-
-    cout<<sum<<" "<<div<<" "<<modulo<<" "<<multi;
+    cout << "Without Explicit Casting:" << endl;
+    cout << "Sum: " << sum << " Div: " << div << " Modulo: " << modulo << " Multi: " << multi << endl;
 }
 
-void Explict(int x, int y)
+void explicitCast(int x, int y)
 {
-    double sum;
-    //doing sum
-    sum =static_cast<double>(x+y);
+    if (y == 0) {
+        cout << "Division or modulo by zero is not allowed." << endl;
+        return;
+    }
 
-    double div;
-    //doing division
-    div =static_cast<double>(x/y);
+    double sum = static_cast<double>(x + y);
+    double div = static_cast<double>(x) / y;  // Proper casting for division
+    double multi = static_cast<double>(x * y);
 
-    double modulo;
-    modulo =static_cast<double>(x%y);
-
-    double multi;
-    multi =1.0*static_cast<double> (x*y);
-
-    cout<<sum<<" "<<div<<" "<<modulo<<" "<<multi;
+    cout << "With Explicit Casting:" << endl;
+    cout << "Sum: " << sum << " Div: " << div << " Modulo: Not Applicable Multi: " << multi << endl;
 }
 
 int main()
 {
-    int x;
-    int y;
-    cin>>x>>y;
-    Explict(x,y);
-    cout<<endl;
-    withoutexplict(x,y);
+    int x, y;
+    cout << "Enter two integers: ";
+    cin >> x >> y;
+
+    explicitCast(x, y);
+    withoutexplict(x, y);
 
     return 0;
 }
-
-
