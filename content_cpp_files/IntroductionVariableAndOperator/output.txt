@@ -1,0 +1,2 @@
+Fixed-point: 1234.57
+Scientific: 1.235e+003
